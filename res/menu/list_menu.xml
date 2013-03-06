@@ -1,0 +1,40 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/menu_insert"
+        android:icon="@android:drawable/ic_menu_add"
+        android:showAsAction="always"
+        android:title="@string/menu_insert"/>
+    <item
+        android:id="@+id/helpPanelList"
+        android:icon="@android:drawable/ic_menu_help"
+        android:showAsAction="always"
+        android:title="help"/>
+    <item
+        android:id="@+id/newPanel"
+        android:showAsAction="withText"
+        android:title="new panel"/>
+    <item
+        android:id="@+id/changePanel"
+        android:showAsAction="withText"
+        android:title="change panel"/>
+    <item
+        android:id="@+id/renamePanel"
+        android:showAsAction="withText"
+        android:title="rename panel"/>
+        <item
+        android:id="@+id/deletePanel"
+        android:showAsAction="withText"
+        android:title="delete panel"/>
+    <item
+        android:id="@+id/loadPanel"
+        android:icon="@android:drawable/ic_menu_upload"
+        android:showAsAction="withText"
+        android:title="import panel"/>
+    <item
+        android:id="@+id/savePanel"
+        android:icon="@android:drawable/ic_menu_upload"
+        android:showAsAction="withText"
+        android:title="export panel"/>
+    
+</menu>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Match Stats</string>
+    <string name="menu_settings">Settings</string>
+    <string name="no_names">No Data Yet</string>
+    <string name="firstname">Enter Firstname:</string>
+    <string name="surname">Enter Surname:</string>
+    <string name="date">Reminder Date</string>
+    <string name="time">Time</string>
+    <string name="menu_insert">Add Item?</string>
+    <string name="menu_delete">Delete?</string>
+    <string name="save">Save</string>
+    <string name="head1">Name</string>
+    <string name="head3">Phone</string>
+    <string name="task_saved_message">Player Saved</string>
+
+    <color name="background_header">#00eeff</color>
+
+    <string name="nickname">Enter Nickname:</string>
+    <string name="phone">Enter Phone Number:</string>
+    <string name="address">Enter Address:</string>
+
+    <string-array name="minsPerHalf">
+        <item>40</item>
+        <item>35</item>
+        <item>30</item>
+        <item>25</item>
+        <item>22</item>
+        <item>20</item>
+        <item>18</item>
+        <item>17</item>
+        <item>16</item>
+        <item>15</item>
+        <item>14</item>
+        <item>12</item>
+        <item>10</item>
+        <item>9</item>
+        <item>8</item>
+        <item>7</item>
+        <item>6</item>
+        <item>5</item>
+        <item>4</item>
+        <item>3</item>
+    </string-array>
+    <string name="trainSummary">review attendance by player\n(opens csv file/spreadsheet)</string>
+
+</resources>

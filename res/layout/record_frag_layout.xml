@@ -1,0 +1,835 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutRecorddm"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:id="@+id/scrollView30"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#bbbbbb"
+                android:orientation="horizontal"
+                android:paddingBottom="2dp"
+                android:paddingTop="2dp" >
+
+                <TextView
+                    android:id="@+id/which_half"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:paddingTop="2dp"
+                    android:text="START FIRST HALF "
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text=" "
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/start_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|right"
+                    android:layout_marginRight="4dp"
+                    android:text="Start Time: 00:00"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp" >
+
+                <Button
+                    android:id="@+id/start_stop_timer"
+                    android:layout_width="54dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_gravity="top"
+                    android:layout_marginTop="12dp"
+                    android:gravity="top|center_horizontal"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:text="start"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/decrease_timer"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/start_stop_timer"
+                    android:layout_marginRight="3dp"
+                    android:layout_toRightOf="@+id/start_stop_timer"
+                    android:gravity="top|center_horizontal"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:paddingLeft="1dp"
+                    android:paddingRight="1dp"
+                    android:text="-"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/time_gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/start_stop_timer"
+                    android:layout_alignTop="@+id/start_stop_timer"
+                    android:layout_gravity="center_vertical|center"
+                    android:layout_toRightOf="@+id/decrease_timer"
+                    android:background="#ccc"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:text="00:00"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/increase_timer"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/start_stop_timer"
+                    android:layout_marginLeft="3dp"
+                    android:layout_toRightOf="@+id/time_gone"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:paddingLeft="1dp"
+                    android:paddingRight="1dp"
+                    android:text="+"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/time_left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/time_to_go"
+                    android:layout_alignRight="@+id/time_to_go"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="time left"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/time_to_go"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/start_stop_timer"
+                    android:layout_alignParentRight="false"
+                    android:layout_alignTop="@+id/start_stop_timer"
+                    android:layout_gravity="right|center_vertical|fill_horizontal|end"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@+id/increase_timer"
+                    android:background="#ccc"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:text="00:00"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/ttime_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignRight="@+id/time_gone"
+                    android:layout_toRightOf="@+id/decrease_timer"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="time gone"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/mins_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="false"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="4dp"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="mins/half"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/mins_per_half"
+                    android:layout_width="54dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/start_stop_timer"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="false"
+                    android:gravity="top|center_horizontal"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:text="30"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="10dp"
+                android:background="#bbbbbb"
+                android:orientation="horizontal"
+                android:paddingTop="2dp" >
+
+                <TextView
+                    android:id="@+id/ourTeam"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="OWN TEAM"
+                    android:textColor="#f00"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/oppTeam"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="OPPOSITION"
+                    android:textColor="#f00"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="0dp" >
+
+                <Button
+                    android:id="@+id/home_points"
+                    android:layout_width="58dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/home_goals"
+                    android:layout_alignBottom="@+id/home_goals"
+                    android:layout_toRightOf="@+id/home_goals"
+                    android:gravity="top|center_horizontal"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:text="+"
+                    android:textSize="24sp" />
+
+                <Button
+                    android:id="@+id/dec_home_points"
+                    android:layout_width="26dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/dec_home_goals"
+                    android:layout_alignBottom="@+id/home_points"
+                    android:layout_toRightOf="@+id/home_points"
+                    android:gravity="top|center_horizontal"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:text="-"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/dec_opp_goals"
+                    android:layout_width="26dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/dec_home_points"
+                    android:layout_alignBottom="@+id/dec_home_points"
+                    android:layout_toLeftOf="@+id/opp_goals"
+                    android:gravity="top|center_horizontal"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:text="-"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/opp_goals"
+                    android:layout_width="46dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/home_goals"
+                    android:layout_alignBottom="@+id/dec_opp_goals"
+                    android:layout_toLeftOf="@+id/opp_points"
+                    android:gravity="top|center_horizontal"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:text="+"
+                    android:textSize="24sp" />
+
+                <Button
+                    android:id="@+id/opp_points"
+                    android:layout_width="58dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/home_goals"
+                    android:layout_alignBottom="@+id/opp_goals"
+                    android:layout_toLeftOf="@+id/dec_opp_points"
+                    android:gravity="top|center_horizontal"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:text="+"
+                    android:textSize="24sp" />
+
+                <Button
+                    android:id="@+id/dec_opp_points"
+                    android:layout_width="26dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/dec_home_goals"
+                    android:layout_alignBottom="@+id/opp_points"
+                    android:layout_alignParentRight="true"
+                    android:gravity="top|center_horizontal"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:text="-"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/home_goals"
+                    android:layout_width="46dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:layout_toRightOf="@+id/dec_home_goals"
+                    android:gravity="top|center_horizontal"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:text="+"
+                    android:textSize="24sp" />
+
+                <Button
+                    android:id="@+id/dec_home_goals"
+                    android:layout_width="26dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignTop="@+id/home_goals"
+                    android:layout_marginTop="5dp"
+                    android:gravity="top|center_horizontal"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:text="-"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/points_label2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/opp_points"
+                    android:layout_alignRight="@+id/opp_points"
+                    android:gravity="center_horizontal"
+                    android:text="points"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/goals_label2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/opp_goals"
+                    android:layout_alignRight="@+id/opp_goals"
+                    android:gravity="center_horizontal"
+                    android:text="goals"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/goals_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/home_goals"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignRight="@+id/home_goals"
+                    android:gravity="center_horizontal"
+                    android:text="goals"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/points_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/home_points"
+                    android:layout_alignParentTop="true"
+                    android:layout_toLeftOf="@+id/dec_home_points"
+                    android:gravity="center_horizontal"
+                    android:text="points"
+                    android:textSize="10sp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="2dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="2dp"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="total:"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/home_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:gravity="center_horizontal"
+                    android:text="(00)"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/up_down_draw_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="4dp"
+                    android:text="drawn game"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/home_difference"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text=" "
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="2dp"
+                    android:gravity="center_horizontal"
+                    android:text="total:"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/opp_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:gravity="center_horizontal"
+                    android:text="(00)"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="0dp"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/reset_timer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:paddingBottom="0dp"
+                    android:text="reset time"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/reset_score"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="top|center_horizontal"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:text="reset score"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/reset_stats"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:paddingBottom="0dp"
+                    android:text="reset stats"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="0dp" >
+
+                <Button
+                    android:id="@+id/buttonShotHome"
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:text="shot"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/buttonShotCommitHome"
+                    android:layout_width="74dp"
+                    android:layout_height="40dp"
+                    android:layout_alignBottom="@+id/buttonShotHome"
+                    android:layout_alignTop="@+id/buttonShotHome"
+                    android:layout_gravity="right"
+                    android:layout_toRightOf="@+id/buttonShotHome"
+                    android:text="commit"
+                    android:textColor="#bbbbbb"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/textViewShotResult"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="30dp"
+                    android:layout_toLeftOf="@+id/textViewShotType"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp"
+                    android:paddingTop="5dp"
+                    android:text="outcome"
+                    android:textColor="#ff0000"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/textViewShotType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/textViewShotResult"
+                    android:layout_alignBottom="@+id/buttonShotHome"
+                    android:layout_toLeftOf="@+id/textViewspacer1"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:padding="2dp"
+                    android:text="type"
+                    android:textColor="#ff0000"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/textViewShotPlayer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/textViewShotResult"
+                    android:layout_alignBottom="@+id/buttonShotHome"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/textViewspacer1"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:padding="2dp"
+                    android:text="player"
+                    android:textColor="#ff0000"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/buttonShotOpp"
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="false"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:text="shot"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/buttonShotCommitOpp"
+                    android:layout_width="74dp"
+                    android:layout_height="40dp"
+                    android:layout_alignBottom="@+id/buttonShotHome"
+                    android:layout_alignParentLeft="false"
+                    android:layout_alignParentTop="true"
+                    android:layout_toLeftOf="@+id/buttonShotOpp"
+                    android:text="commit"
+                    android:textColor="#bbbbbb"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/textViewspacer1"
+                    android:layout_width="2dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/textViewShotType"
+                    android:layout_alignBottom="@+id/textViewShotType"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/textViewShotPosn1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/textViewShotResult"
+                    android:layout_alignParentLeft="false"
+                    android:layout_alignParentTop="false"
+                    android:layout_toRightOf="@+id/textViewShotPlayer"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:padding="2dp"
+                    android:text="location"
+                    android:textColor="#ff0000"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/buttonFreeHome"
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:text="free"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/buttonFreeCommitHome"
+                    android:layout_width="74dp"
+                    android:layout_height="40dp"
+                    android:layout_alignBottom="@+id/buttonFreeHome"
+                    android:layout_alignParentRight="false"
+                    android:layout_alignTop="@+id/buttonFreeHome"
+                    android:layout_gravity="right"
+                    android:layout_toRightOf="@+id/buttonFreeHome"
+                    android:text="commit"
+                    android:textColor="#bbbbbb"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/textViewFreeType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/textViewFreePlayer"
+                    android:layout_alignParentTop="false"
+                    android:layout_toLeftOf="@+id/textViewFreePlayer"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:paddingTop="4dp"
+                    android:text="reason"
+                    android:textColor="#ff0000"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/textViewFreePlayer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="5dp"
+                    android:text="player"
+                    android:textColor="#ff0000"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/textViewFreePosn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/textViewFreePlayer"
+                    android:layout_toRightOf="@+id/textViewFreePlayer"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:maxWidth="60dp"
+                    android:paddingLeft="5dp"
+                    android:text="location"
+                    android:textColor="#ff0000"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/buttonFreeOpp"
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="false"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:text="free"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/buttonFreeCommitOpp"
+                    android:layout_width="74dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="false"
+                    android:layout_alignParentTop="true"
+                    android:layout_toLeftOf="@+id/buttonFreeOpp"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:text="commit"
+                    android:textColor="#bbbbbb"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/buttonPuckHome"
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentTop="true"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:text="puck out"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/buttonPuckCommitHome"
+                    android:layout_width="74dp"
+                    android:layout_height="40dp"
+                    android:layout_alignBottom="@+id/buttonPuckHome"
+                    android:layout_alignTop="@+id/buttonPuckHome"
+                    android:layout_gravity="right"
+                    android:layout_toRightOf="@+id/buttonPuckHome"
+                    android:text="commit"
+                    android:textColor="#bbbbbb"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/textViewPuckType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/textViewPuckPlayer"
+                    android:layout_alignBottom="@+id/buttonPuckHome"
+                    android:layout_alignTop="@color/background_header"
+                    android:layout_toLeftOf="@+id/textViewPuckPlayer"
+                    android:layout_toRightOf="@color/background_header"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:padding="4dp"
+                    android:text="outcome"
+                    android:textColor="#ff0000"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/textViewPuckPlayer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:padding="4dp"
+                    android:text="player"
+                    android:textColor="#ff0000"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/textViewPuckPosn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/textViewPuckPlayer"
+                    android:layout_alignBottom="@+id/buttonPuckHome"
+                    android:layout_toRightOf="@+id/textViewPuckPlayer"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:maxWidth="60dp"
+                    android:padding="4dp"
+                    android:text="location"
+                    android:textColor="#ff0000"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/buttonPuckOpp"
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:text="puck out"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/buttonPuckCommitOpp"
+                    android:layout_width="74dp"
+                    android:layout_height="40dp"
+                    android:layout_alignBottom="@+id/buttonPuckOpp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toLeftOf="@+id/buttonPuckOpp"
+                    android:text="commit"
+                    android:textColor="#bbbbbb"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/buttonUndo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="33dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="50dp"
+                    android:text="undo last stats entry"
+                    android:textColor="#bbbbbb"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

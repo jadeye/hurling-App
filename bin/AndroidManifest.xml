@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="fm.matchstats"
+    android:versionCode="8"
+    android:versionName="1.2" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="16" />
+
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <application
+        android:allowBackup="true"
+        android:enabled="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="fm.matchstats.StartupActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="fm.matchstats.MatchApplication"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="fm.matchstats.db.run.PanelEditActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="fm.matchstats.db.run.PanelListActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="fm.matchstats.db.run.TrainingListActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="fm.matchstats.db.run.TrainingReviewActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="fm.matchstats.db.run.MatchEditActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="fm.matchstats.db.run.MatchListActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="fm.matchstats.db.run.ShotsListActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="fm.matchstats.db.run.PuckOutsListActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="fm.matchstats.db.run.FreesListActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="fm.matchstats.HelpActivity"
+            android:label="@string/app_name" >
+        </activity>
+
+        <provider
+            android:name="fm.matchstats.db.PanelContentProvider"
+            android:authorities="fm.matchstats.provider.panel"
+            android:exported="false" />
+        <provider
+            android:name="fm.matchstats.db.MatchContentProvider"
+            android:authorities="fm.matchstats.provider.match"
+            android:exported="false" />
+        <provider
+            android:name="fm.matchstats.db.ShotContentProvider"
+            android:authorities="fm.matchstats.provider.shots"
+            android:exported="false" />
+        <provider
+            android:name="fm.matchstats.db.PuckOutContentProvider"
+            android:authorities="fm.matchstats.provider.puckouts"
+            android:exported="false" />
+        <provider
+            android:name="fm.matchstats.db.FreeContentProvider"
+            android:authorities="fm.matchstats.provider.frees"
+            android:exported="false" />
+        <provider
+            android:name="fm.matchstats.db.TrainingContentProvider"
+            android:authorities="fm.matchstats.provider.training"
+            android:exported="false" />
+        <provider
+            android:name="fm.matchstats.db.AttendanceContentProvider"
+            android:authorities="fm.matchstats.provider.attendance"
+            android:exported="false" />
+        <provider
+            android:name="fm.matchstats.db.PositionContentProvider"
+            android:authorities="fm.matchstats.provider.positions"
+            android:exported="false" />
+    </application>
+
+</manifest>

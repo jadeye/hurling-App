@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="panelListHelp">
+<![CDATA[
+ <h1>HELP - List Panel Screen</h1>
+ <p>
+This screen displays list of players on the current panel.  The name of the panel is displayed
+at the top of the screen. (If panel name is null use the the <b>rename panel</b> to assign
+a name.)
+ </p> 
+ <p>
+Touch <b>+</b> to add a new player to the current panel<br/> 
+ </p>
+ <p>
+Swipe up and down to scroll if list extends off end of screen
+ </p>
+  <p>
+Touch on a<b> <i>player row</i> </b>to see and / or edit player details </p>
+ <p>
+<b>LongPress</b> a <b><i>player row</i></b> to get options to:<br/>
+1. delete player<br/>
+2. make phone call to player <br/>
+3. send text to player<br/>
+ </p> 
+ <p>
+<b>Drop Down Menu</b> <br/>
+• <b>new panel</b> creates a new panel. Enter the name.<br/>
+• <b>change panel</b> changes to another entered panel. <br/>
+• <b>rename panel</b> changes the name of a panel.  Select the panel you want to rename and enter a new name<br/>
+• <b>delete panel</b> select panel to delete<br/>
+• <b>import panel</b> load a saved panel from storage<br/>
+• <b>export panel</b> save the current panel to the device (panels are stored in a directory
+ named match_BU)<br/>
+ </p>
+ <p><b>Importing existing panels</b> <br/>
+ if you have an existing panel (in a spreadsheet for example), format it as a csv file to import it
+ to the app.  The easist way to get the correct format is to examine an exported file.
+ </p>
+ 
+ <p>touch <b>back button</b> to return to previous screen.
+ </p>
+ ]]>
+    </string>
+    <string name="panelEditHelp">
+<![CDATA[
+<h1>HELP - Create / Edit Player Screen</h1>
+<p>
+Enter player details here.
+</p>
+<p>
+You must enter a Nickname as a minimum to be able to Save a player.  
+Other fields are optional. The Nickname must be between 3 and 6 characters long.
+</p>
+<p>
+Touch <b>Save</b> to create a new player or save edits to an existing player.
+</p>
+]]>
+    </string>
+    <string name="reviewListHelp">
+<![CDATA[
+<h1>HELP - Review Screens</h1>
+<p>
+View list of match statistics 
+</p>
+<p>
+<b>LongPress</b> a <i>row</i> to get options to delete it<br/>
+</p>
+<p>
+Touch <b>Save</b> to create a new player or save edits to an existing player.
+</p>
+]]>
+    </string>
+    <string name="trainingHelp">
+<![CDATA[
+<h1>HELP - Training Attendance Screen</h1>
+<p>
+Enter <i>date, location</i> and any <i>comments</i> here.
+</p>
+<p>
+Touch the <b> select players present</b> button to display a list of players on 
+the panel. Touch the <b>checkboxes</b> beside each player to record their attendance.
+Swipe/Scroll to see full list if necessary. Click OK when finished.<br/><br/>
+A list of selected players will be displayed on return.
+<br/><br/>Touch the <b>select players present</b> button again to add or remove players
+from the list
+</p>
+<p>
+Touch <b>save players</b> to save the list of attending players to the database.
+</p>
+<p>
+Touch <b>review attendance by player</b> to get a summary of attendance for each player
+at each training training session. Note that your device must be able to open csv files.
+</p>
+<p>
+Touch <b>email attendance</b> to save and email the attendance summary.  The summary will be
+saved and emailed as a csv file called <b>training_summary.csv</b>  
+</p>
+<p>
+<b>list of training sessions</b> <br/>
+Touch on a row/date to see details for that specific training session.  <br/>
+Long press on a row/date to delete details of a specific training session.
+</p>
+
+]]>
+    </string>
+    <string name="startHelp">
+<![CDATA[
+ <h1>HELP - Start Screen</h1>
+ <p>This App allows you to:<br/>
+	• to store contact details for a panel of players<br/>
+	• to record attendance at training<br/>
+ 	• time and keep score for a hurling/camogie match<br/>
+	 • record team and player performance stastics<br/>
+	• review summary and details statistics<br/>
+ 	• email statistics in a csv format which can be opened in spreadsheet
+ 	software for more detailed analysis later<br/>
+  </p>
+ <p>
+ <b>help</b><br/> 
+ 	Touch <b>?</b> in menu bar at the top to get help in any screen.
+ </p> 
+ <p>
+ <b>manage panel</b><br/> 
+ 	Touch to see lists of players  and contact details.
+ </p>
+ <p>
+ <b>manage training</b><br/> 
+ 	Touch to record attendance at training.
+ </p>
+ 
+ <p>
+ <b>start new match</b><br/> 
+ 	All match related data - timer/scores/statistics -  is 
+ 	deleted/reset and a new match setup will begin.<br/><br/>
+ 	Panel details and the team lineup from the previous match are retained.
+ </p>
+ <p>
+ <b>continue existing match</b><br/> 
+What it says!.  All current match data is retained.
+ </p>
+ <p>
+ <b>save / email match data</b><br/> 
+	match and statitics data for the current match is backed up to device storage and 
+	can be emailed.  <br/>
+	Files stored/emailed are:<br/>
+	• shots.csv <br/>
+	• frees.csv <br/>
+	• puckouts.csv <br/>
+	• positions.csv <br/>
+	The .csv files can be opened with spreadsheet software<br/>
+ </p>
+ 
+ <p>
+ <b>quit</b><br/>
+ 	 quit app. No data is deleted.
+ </p>
+<p><b>touch back button to return to previous screen.</b></p>
+ ]]>
+    </string>
+    <string name="setupHelp">
+<![CDATA[
+ <h1>HELP - SETUP screen </h1>
+ <p>
+ This screen is used to enter match details, and make/save team selection.<br/><br/>
+ By default, the team selection from the last match is retained so you can edit
+ it rather than start from scratch. To clear the team selection long press the <b>
+ reset team</b> button.
+ <br/><br/>You select 15 players and up to 10 subs. 
+ </p>
+ <p>
+Enter <i><b>Date, Opposition Team name</i> and <i>Location</i></b> at top of the screen. Own team 
+name defaults to the current panel name.  To change it go into the manage panel section.
+</p>
+ <p>
+To select the team, touch on one of the position buttons.  This will display a list of 
+players on your panel. Swipe/scroll, if necessary, to see all players and touch one to select.  
+Repeat for all the positions and subs.<br/><br/>
+
+It is not necessary to select a player for all or any of the positions, you can just leave the 
+number if you prefer.
+</p>
+<p>
+ When you are finished, touch the <b>save starting team</b> button to save the starting lineup.
+<br/><br/>You can only save starting team once. You will get a message if you try again. 
+Quit back out to <b>start screen</b> and <b>start new match</b> again if you want to enter 
+a new team selection.
+ </p>
+ <p>
+To make a postion change or substitution use the -SWAP- item in the panel list. For example: to
+substitute the goalkeeper: <br/>• touch the goalkeeper position button and select -SWAP- from the 
+list of players. <br/>•This will remove the goalkeepers name  onto the list of players and insert
+ -SWAP- into the team lineup. <br/>•Then touch on the button of the sub you want to use. 
+ <br/>•Select the goalkeepers name from the list of players. <br/>•This will remove the subs 
+ name onto the list of players and swap in the goalkeepers name as the sub. <br/>• Now touch
+ on the goalkeeper position button and select the subs name from the list of players.<br/>•
+ This will swap the subs name into the team line up and remove -SWAP- to the list of players
+ again.<br/>•touch the <b>make change</b> button to save the 
+ change.<br/><br/>
+  
+ The same procedure applies to making postion changes - swap in -SWAP- to take a player out, 
+ swap that player into their new position, put the player swapped out of that position back 
+ into the first position instead of -SWAP- and touch the <b>make change</b> button to save the 
+ change.<br/><br/>
+ 
+ After making a substitution or position change, touch the <b>make change</b> button to save 
+ the changes. 
+ 
+ </p>
+<p><b>swipe screen or touch tab at top to change to <b>RECORD</b> or <b>REVIEW</b> screens.</b></p>
+<p><b>touch back button to return to Start screen.<b>
+ ]]>
+    </string>
+    <string name="recordHelp">
+<![CDATA[
+ <h1>HELP - RECORD screen </h1>
+ <p>
+ <b>TIMER SECTION</b><br/>
+ Touch the <b>mins/half</b> button to set how long the match will be. You can do this while
+ the timer is running if you forget to do it at the start.<b/><br/>
+ Touch the <b>start</b> button to start the match timer. Screen will update with start time, 
+ time gone and time left in the half.<br/>
+ You can touch the <b>-</b> and <b>+</b> to adjust the time by 30 secs if necessary while the timer
+ is running.<br/>
+ Touch <b>stop</b> to end the first half and <b>start</b> again to commence the second half.
+ <br/><br/>
+ Touching <b>stop</b> at the end of each half also saves the score and start times to the
+ database.
+ </p>  
+ <p>
+ <b>SCORE SECTION</b><br/>
+ Touch the <b>goals</b> and <b>points</b> buttons to increment the scores.<br/>
+ Touch the <b>-</b> and <b>+</b> buttons to decrement the scores.<br/>
+ <p>  
+ <p>
+ <b>RESET SECTION</b><br/>
+ Long touch to reset match <b>timer</b> and/or <b>score</b> and/or <b>stats</b>.
+ </p>
+ <p>
+ <b>RECORD STATS SECTION</b><br/>
+ In this section you can record info/statistics pertaining to shots, frees and puck outs
+ for your own team and the opposition. Own team always refers to the team on the left
+ of the screen<br/><br/>
+ Touch the <b>shot / free / puck out</b> buttons to record stats. The values you have
+ selected will be displayed in red. Touch the <b>commit</b> button to save the chosen
+ values or the <b>shot / free / puck out</b> buttons again to change your selection.<br/><br/>
+ 
+ <b>1. Shots</b><br/>
+ You can record:<br/>
+ • shot outcome<br/>
+ • shot type<br/>
+ • for your own team, the player name who took shot<br/>
+ • for opposition team, the player number who took shot<br/>
+ • zone on pitch from where shot was taken. (Note your own goal is always at the 
+ bottom of screen with  opposition on top.)
+ <br/><br/> 
+ <b>2. Frees</b><br/>
+ You can record:<br/>
+ • reason for free<br/>
+  • zone on pitch where free was awarded<br/>
+ 
+ • for your own team, which player, if applicable, was fouled.  <br/>
+ • for opposition team, if applicable, which of your own players was responsible for giving away the free<br/>
+ <br/><br/>
+ <b>3. Puck Outs</b><br/>
+   You can record:<br/>
+ • puck out outcome<br/>
+  • zone on pitch where puck out was won or lost<br/>
+
+ • for your own team, which player, if applicable, won or lost the puck out<br/>
+ </p>
+<p>
+Touch <b>undo last stats entry</b> to delete the last stats entry if you made an error.
+You can delete up to the 4 most recent entries.
+</p>
+
+<p><b>swipe screen or touch tabs at top to change to <b>SETUP</b> or <b>REVIEW</b> screens.</b></p>
+<p><b>touch back button to return to Start screen.<b>
+ ]]>
+    </string>
+    <string name="reviewHelp">
+<![CDATA[
+ <h1>HELP - REVIEW screen </h1>
+  <p>
+ The review screen presents a summary of recorded statistics for the current match. <br/> <br/>
+ In the <b>shots</b> and <b>puckouts section</b> the numbers are as a percentage for each team.<br/> <br/>
+ In the <b>free</b> setion the numbers are as a percentage of the total frees awared in the match.
+ </p>
+<p>
+ The <b>review shots, review frees</b> and <b>review puckouts</b> buttons display a detailed list
+ of all data / statistics recorded.<br/>
+
+<p><b>touch back button to return to Start screen.</b></p>
+ 
+
+ ]]>
+    </string>
+
+</resources>

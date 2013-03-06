@@ -1,0 +1,19 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/menu_delete"
+        android:icon="@android:drawable/ic_delete"
+        android:showAsAction="always|withText"
+        android:title="Delete?"/>
+    <item
+        android:id="@+id/dialer"
+        android:showAsAction="always|withText"
+        android:title="Phone?">
+    </item>
+   <item
+        android:id="@+id/sendText"
+        android:showAsAction="always|withText"
+        android:title="Send Text?">
+    </item>
+    
+</menu>

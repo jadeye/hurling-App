@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp" >
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="0dp"
+        android:paddingRight="0dp" >
+
+        <TextView
+            android:id="@+id/train1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/trainDate"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="0dp"
+            android:gravity="bottom|right"
+            android:paddingRight="4dp"
+            android:text="Date:"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/trainDate"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="22dp"
+            android:layout_toRightOf="@+id/train1"
+            android:inputType="date"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:padding="2dp"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/train2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/trainLoc"
+            android:layout_alignRight="@+id/train1"
+            android:layout_marginTop="8dp"
+            android:gravity="right"
+            android:paddingRight="4dp"
+            android:text="Location:"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/trainLoc"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_alignBaseline="@+id/trainLoc"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/trainDate"
+            android:layout_toRightOf="@+id/train1"
+            android:includeFontPadding="true"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:padding="2dp"
+            android:textSize="14sp" >
+        </EditText>
+
+        <TextView
+            android:id="@+id/train3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/trainComment"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="8dp"
+            android:layout_toLeftOf="@+id/trainLoc"
+            android:gravity="right"
+            android:paddingRight="4dp"
+            android:text="Comments:"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/trainComment"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_alignBaseline="@+id/trainComment"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/trainLoc"
+            android:layout_toRightOf="@+id/train1"
+            android:includeFontPadding="true"
+            android:lines="4"
+            android:maxLines="4"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:padding="2dp"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvTraining"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@color/background_header"
+            android:gravity="center_vertical|center_horizontal"
+            android:padding="0dp"
+            android:text="Training Attendance"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="0dp"
+        android:paddingRight="0dp" >
+
+        <Button
+            android:id="@+id/bTraining"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:padding="0dp"
+            android:text="select players present"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/trainSave"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_marginBottom="2dp"
+            android:layout_weight="1"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:padding="0dp"
+            android:text="save players "
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/trainList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/trainSave"
+                android:layout_centerInParent="true"
+                android:gravity="center_vertical|center_horizontal"
+                android:paddingTop="4dp"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:paddingLeft="0dp"
+        android:paddingRight="0dp" >
+
+        <Button
+            android:id="@+id/bTrainReview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lines="2"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:paddingBottom="6dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="6dp"
+            android:text="@string/trainSummary"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/bTrainEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/bTrainReview"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/bTrainReview"
+            android:layout_toRightOf="@+id/bTrainReview"
+            android:gravity="center_vertical|center_horizontal"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:text="email attendance"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bTrainReview"
+            android:layout_marginTop="4dp"
+            android:layout_weight="1"
+            android:background="@color/background_header"
+            android:gravity="center_horizontal"
+            android:padding="2dp"
+            android:text="list of training sessions (long press to delete)"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <ListView
+            android:id="@+id/trainListView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bTrainReview"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="32dp" >
+        </ListView>
+    </RelativeLayout>
+
+</LinearLayout>
